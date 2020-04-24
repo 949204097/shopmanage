@@ -23,7 +23,7 @@
             :collapse="isCollapse"
             :collapse-transition="false"
             router
-            :default-active="activePath">
+            :default-active="$route.path">
             <!--一级菜单-->
             <el-submenu :index="item.id + ''" v-for="item in menulist" :key="item.id">
               <!--一级菜单的模板区域-->
