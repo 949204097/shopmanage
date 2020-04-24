@@ -169,7 +169,7 @@ export default {
       //“添加用户”对话框的表单数据
       addForm: {
         username: '',
-        passpword: '',
+        password: '',
         email: '',
         mobile: '',
       },
@@ -255,10 +255,6 @@ export default {
       this.queryInfo.pagenum = 1
       this.getUserList()
     },
-    //监听“添加用户”对话框的关闭
-    addDialogClosed() {
-      this.$refs.addFormRef.resetFields()
-    },
     //点击确定按钮，添加用户
     addUser() {
       this.$refs.addFormRef.validate(async valid => {
@@ -274,6 +270,10 @@ export default {
         //重新获取用户列表数据
         this.getUserList()
       })
+    },
+    //监听“添加用户”对话框的关闭
+    addDialogClosed() {
+      this.$refs.addFormRef.resetFields()
     },
     //“修改用户”的对话框
     async showEditDialog(id) {
