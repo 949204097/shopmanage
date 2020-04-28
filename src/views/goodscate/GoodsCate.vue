@@ -167,7 +167,6 @@ export default {
         this.addCateForm.cat_pid = 0
         this.addCateForm.cat_level = 0
       }
-      console.log(this.addCateForm)
     },
     //监听添加分类对话框的关闭
     addCateDialogClosed() {
