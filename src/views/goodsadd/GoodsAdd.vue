@@ -249,7 +249,6 @@ export default {
         const form = _.cloneDeep(this.addForm)
         //const form = JSON.parse(JSON.stringify(this.addForm))
         form.goods_cat = form.goods_cat.join(',')
-        console.log(form)
         const {data: res} = await this.$http.post('goods', form)
         if(res.meta.status !== 201) {
           return this.$message.error(res.meta.msg)
